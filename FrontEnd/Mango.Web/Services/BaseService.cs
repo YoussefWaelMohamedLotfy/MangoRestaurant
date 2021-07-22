@@ -1,5 +1,4 @@
-﻿using Mango.Web.Models.Dtos;
-using Mango.Web.Models;
+﻿using Mango.Web.Models;
 using Mango.Web.Services.IServices;
 using System;
 using System.Collections.Generic;
@@ -37,8 +36,8 @@ namespace Mango.Web.Services
                 if (apiRequest.Data != null)
                     message.Content = new StringContent(JsonConvert.SerializeObject(apiRequest.Data), Encoding.UTF8, "application/json");
 
-                if (!string.IsNullOrEmpty(apiRequest.AccessToken))
-                    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiRequest.AccessToken);
+                //if (!string.IsNullOrEmpty(apiRequest.AccessToken))
+                //    client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", apiRequest.AccessToken);
 
                 HttpResponseMessage apiResponse = null;
 
