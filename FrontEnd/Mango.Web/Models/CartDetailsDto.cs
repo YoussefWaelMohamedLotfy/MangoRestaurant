@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mango.Services.ShoppingCartAPI.Models.Dtos
+namespace Mango.Web.Models
 {
     public class CartDetailsDto
     {
@@ -16,7 +16,7 @@ namespace Mango.Services.ShoppingCartAPI.Models.Dtos
 
         public int ProductId { get; set; }
 
-        public virtual Product Product { get; set; }
+        public virtual ProductDto Product { get; set; }
 
         public int Count { get; set; }
     }

@@ -130,7 +130,7 @@ namespace Mango.Services.ShoppingCartAPI.Repository
                 await _db.SaveChangesAsync();
                 return true;
             }
-            catch (Exception e)
+            catch (Exception)
             {
                 return false;
             }
