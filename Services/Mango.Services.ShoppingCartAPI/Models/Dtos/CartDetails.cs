@@ -4,20 +4,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Mango.Services.ShoppingCartAPI.Models
+namespace Mango.Services.ShoppingCartAPI.Models.Dtos
 {
-    public class CartDetail
+    public class CartDetailsDto
     {
         public int CartDetailsId { get; set; }
 
         public int CartHeaderId { get; set; }
 
-        [ForeignKey("CartHeaderId")]
-        public virtual CartHeader CartHeader { get; set; }
+        public virtual CartHeaderDto CartHeader { get; set; }
 
         public int ProductId { get; set; }
 
-        [ForeignKey("ProductId")]
         public virtual Product Product { get; set; }
 
         public int Count { get; set; }
