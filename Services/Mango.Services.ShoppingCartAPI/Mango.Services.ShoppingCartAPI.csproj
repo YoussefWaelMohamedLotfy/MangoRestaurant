@@ -18,4 +18,8 @@
     <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="6.1.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Integration\Mango.MessageBus\Mango.MessageBus.csproj" />
+  </ItemGroup>
+
 </Project>
